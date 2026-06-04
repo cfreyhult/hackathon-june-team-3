@@ -41,9 +41,20 @@ export default function CloseProgressOverview() {
                       <span className="shrink-0 w-2 h-2 rounded-full bg-red-500" title="Kritisk vei" />
                     )}
                     {!item.isCriticalPath && <span className="shrink-0 w-2 h-2" />}
-                    <span className="text-sm text-gray-900 truncate">{item.title}</span>
+                    <div className="min-w-0">
+                      <span className="text-sm text-gray-900 truncate block">{item.title}</span>
+                      {item.bnxtStatusFlags && (
+                        <span className="text-xs text-gray-500 truncate block">
+                          {item.bnxtOrigin && <span className="text-gray-400">{item.bnxtOrigin} · </span>}
+                          {item.bnxtStatusFlags}
+                        </span>
+                      )}
+                    </div>
                   </div>
                   <div className="flex items-center gap-3 shrink-0">
+                    {item.bnxtDocumentNo && (
+                      <span className="text-xs text-gray-400 font-mono">#{item.bnxtDocumentNo}</span>
+                    )}
                     <StatusBadge status={item.status} />
                     <a
                       href={item.sourceLink}

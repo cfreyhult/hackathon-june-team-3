@@ -25,6 +25,12 @@ export interface CloseItem {
   sourceModule: 'approval' | 'accounting' | 'project-financial-management'
   /** Optional: linked approval task ID */
   approvalTaskId?: string
+  /** Business NXT incoming accounting document number */
+  bnxtDocumentNo?: number
+  /** Human-readable status flags from Business NXT */
+  bnxtStatusFlags?: string
+  /** Document origin (AutoInvoice, Scan, etc.) */
+  bnxtOrigin?: string
 }
 
 export interface Approver {
