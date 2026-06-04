@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useCallback, type ReactNode } from 'react'
 import type { CloseState, ReminderRecord } from '../types'
-import { initialState } from '../data/mock-data'
+import { initialState } from '../data/bnxt-data'
 
 interface CloseContextValue extends CloseState {
   sendReminder: (taskId: string, recipientId: string, recipientName: string) => { success: boolean; message: string }
