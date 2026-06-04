@@ -1,5 +1,6 @@
 import { CloseProvider } from './context/CloseContext'
 import CloseProgressOverview from './components/CloseProgressOverview'
+import ApprovalTaskList from './components/ApprovalTaskList'
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         </header>
         <main className="max-w-5xl mx-auto p-6 space-y-8">
           <CloseProgressOverview />
+          <ApprovalTaskList />
         </main>
       </div>
     </CloseProvider>
