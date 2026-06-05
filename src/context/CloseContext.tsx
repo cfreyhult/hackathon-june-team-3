@@ -1,8 +1,14 @@
-import { createContext, useContext, useState, useCallback, type ReactNode } from 'react'
-import type { CloseState, ReminderRecord } from '../types'
-import { initialState } from '../data/bnxt-data'
+import { createContext, useContext, useState, useCallback, useEffect, type ReactNode } from 'react'
+import type { CloseState, CompanyInfo, ReminderRecord } from '../types'
+import { fetchCompanies, fetchCompanyData } from '../data/fetcher'
 
 interface CloseContextValue extends CloseState {
+  activeCompanyNo: number
+  availableCompanies: CompanyInfo[]
+  isLoading: boolean
+  isRefreshing: boolean
+  switchCompany: (companyNo: number) => void
+  refreshData: () => Promise<void>
   sendReminder: (taskId: string, recipientId: string, recipientName: string) => { success: boolean; message: string }
   canSendReminder: (taskId: string, recipientId: string) => { allowed: boolean; nextEligible?: string }
   updateReadinessThreshold: (criticalPath: number, nonCritical: number) => void
@@ -10,10 +16,73 @@ interface CloseContextValue extends CloseState {
 
 const CloseContext = createContext<CloseContextValue | null>(null)
 
-const REMINDER_COOLDOWN_MS = 24 * 60 * 60 * 1000 // 24 hours
+const REMINDER_COOLDOWN_MS = 24 * 60 * 60 * 1000
+
+const DEFAULT_COMPANY_NO = 4810168
+
+const EMPTY_STATE: CloseState = {
+  periodLabel: '',
+  companyName: '',
+  closeDeadline: '',
+  items: [],
+  approvalTasks: [],
+  reminders: [],
+  readinessConfig: { criticalPathThreshold: 100, nonCriticalThreshold: 80 },
+  supplierBalances: [],
+  openSupplierSummary: { totalEntries: 0, totalOutstanding: 0, overdueEntries: 0, overdueAmount: 0, supplierCount: 0 },
+  lastSyncedAt: '',
+}
 
 export function CloseProvider({ children }: { children: ReactNode }) {
-  const [state, setState] = useState<CloseState>(initialState)
+  const [companies, setCompanies] = useState<CompanyInfo[]>([])
+  const [activeCompanyNo, setActiveCompanyNo] = useState<number>(DEFAULT_COMPANY_NO)
+  const [state, setState] = useState<CloseState>(EMPTY_STATE)
+  const [isLoading, setIsLoading] = useState(true)
+  const [isRefreshing, setIsRefreshing] = useState(false)
+
+  const loadCompanyData = useCallback(async (companyNo: number) => {
+    const { state: newState } = await fetchCompanyData(companyNo)
+    setState((prev) => ({
+      ...newState,
+      reminders: prev.reminders,
+    }))
+  }, [])
+
+  useEffect(() => {
+    let cancelled = false
+    async function init() {
+      setIsLoading(true)
+      try {
+        const companyList = await fetchCompanies()
+        if (cancelled) return
+        setCompanies(companyList)
+        await loadCompanyData(DEFAULT_COMPANY_NO)
+      } finally {
+        if (!cancelled) setIsLoading(false)
+      }
+    }
+    init()
+    return () => { cancelled = true }
+  }, [loadCompanyData])
+
+  const switchCompany = useCallback(async (companyNo: number) => {
+    setActiveCompanyNo(companyNo)
+    setIsLoading(true)
+    try {
+      await loadCompanyData(companyNo)
+    } finally {
+      setIsLoading(false)
+    }
+  }, [loadCompanyData])
+
+  const refreshData = useCallback(async () => {
+    setIsRefreshing(true)
+    try {
+      await loadCompanyData(activeCompanyNo)
+    } finally {
+      setIsRefreshing(false)
+    }
+  }, [activeCompanyNo, loadCompanyData])
 
   const canSendReminder = useCallback(
     (taskId: string, recipientId: string): { allowed: boolean; nextEligible?: string } => {
@@ -82,6 +151,12 @@ export function CloseProvider({ children }: { children: ReactNode }) {
     <CloseContext.Provider
       value={{
         ...state,
+        activeCompanyNo,
+        availableCompanies: companies,
+        isLoading,
+        isRefreshing,
+        switchCompany,
+        refreshData,
         sendReminder,
         canSendReminder,
         updateReadinessThreshold,
