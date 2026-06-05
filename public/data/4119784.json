@@ -1,0 +1,588 @@
+{
+  "companyNo": 4119784,
+  "companyName": "Inga AS",
+  "tenantId": 3396575,
+  "periodLabel": "Mai 2026",
+  "closeDeadline": "2026-06-10",
+  "fetchedAt": "2026-06-05T14:30:00Z",
+  "documents": [
+    {
+      "incomingAccountingDocumentNo": 822,
+      "description": "Ukjent leverandor",
+      "documentDate": 20260515,
+      "dueDate": 20260614,
+      "supplierNo": 0,
+      "supplierName": "(ingen match)",
+      "incomingAccountingDocumentStatusFlags": ["MultipleSupplierMatches", "DuplicateDocument"],
+      "incomingAccountingDocumentType": 1,
+      "incomingAccountingDocumentOrigin": 4,
+      "invoiceNo": "16781",
+      "voucherNo": 0,
+      "createdDate": 20260515,
+      "changedDate": 20260515
+    },
+    {
+      "incomingAccountingDocumentNo": 821,
+      "description": "Ukjent leverandor",
+      "documentDate": 20260511,
+      "dueDate": 20260610,
+      "supplierNo": 0,
+      "supplierName": "(ingen match)",
+      "incomingAccountingDocumentStatusFlags": ["MultipleSupplierMatches", "DuplicateDocument"],
+      "incomingAccountingDocumentType": 1,
+      "incomingAccountingDocumentOrigin": 4,
+      "invoiceNo": "16682",
+      "voucherNo": 0,
+      "createdDate": 20260515,
+      "changedDate": 20260515
+    },
+    {
+      "incomingAccountingDocumentNo": 816,
+      "description": "Kreatel AS",
+      "documentDate": 20260515,
+      "dueDate": 20260614,
+      "supplierNo": 50102,
+      "supplierName": "Kreatel AS",
+      "incomingAccountingDocumentStatusFlags": ["ErrorInProcessing"],
+      "incomingAccountingDocumentType": 1,
+      "incomingAccountingDocumentOrigin": 4,
+      "invoiceNo": "16781",
+      "voucherNo": 0,
+      "createdDate": 20260515,
+      "changedDate": 20260518
+    },
+    {
+      "incomingAccountingDocumentNo": 814,
+      "description": "BNXT test company",
+      "documentDate": 20260508,
+      "dueDate": 20260511,
+      "supplierNo": 50101,
+      "supplierName": "BNXT test company",
+      "incomingAccountingDocumentStatusFlags": ["SentToAccounting", "BankInformationUpdated"],
+      "incomingAccountingDocumentType": 1,
+      "incomingAccountingDocumentOrigin": 4,
+      "invoiceNo": "123456781",
+      "voucherNo": 0,
+      "createdDate": 20260508,
+      "changedDate": 20260511
+    },
+    {
+      "incomingAccountingDocumentNo": 813,
+      "description": "Ukjent leverandor",
+      "documentDate": 20260507,
+      "dueDate": 0,
+      "supplierNo": 0,
+      "supplierName": "(ingen match)",
+      "incomingAccountingDocumentStatusFlags": ["ErrorInProcessing"],
+      "incomingAccountingDocumentType": 7,
+      "incomingAccountingDocumentOrigin": 1,
+      "invoiceNo": "CN-2026.05.07-10.30.",
+      "voucherNo": 0,
+      "createdDate": 20260507,
+      "changedDate": 20260520
+    },
+    {
+      "incomingAccountingDocumentNo": 812,
+      "description": "Fjord Industries AS",
+      "documentDate": 20260507,
+      "dueDate": 0,
+      "supplierNo": 50064,
+      "supplierName": "Fjord Industries AS",
+      "incomingAccountingDocumentStatusFlags": ["SentToAccounting"],
+      "incomingAccountingDocumentType": 7,
+      "incomingAccountingDocumentOrigin": 1,
+      "invoiceNo": "CN-2026.05.07-10.30.",
+      "voucherNo": 0,
+      "createdDate": 20260507,
+      "changedDate": 20260507
+    },
+    {
+      "incomingAccountingDocumentNo": 809,
+      "description": "Ukjent leverandor",
+      "documentDate": 20260507,
+      "dueDate": 0,
+      "supplierNo": 0,
+      "supplierName": "(ingen match)",
+      "incomingAccountingDocumentStatusFlags": ["ErrorInProcessing"],
+      "incomingAccountingDocumentType": 7,
+      "incomingAccountingDocumentOrigin": 1,
+      "invoiceNo": "CN-2026.05.07-10.30.",
+      "voucherNo": 0,
+      "createdDate": 20260507,
+      "changedDate": 20260507
+    },
+    {
+      "incomingAccountingDocumentNo": 800,
+      "description": "Ukjent leverandor",
+      "documentDate": 20260507,
+      "dueDate": 0,
+      "supplierNo": 0,
+      "supplierName": "(ingen match)",
+      "incomingAccountingDocumentStatusFlags": ["ErrorInProcessing"],
+      "incomingAccountingDocumentType": 7,
+      "incomingAccountingDocumentOrigin": 1,
+      "invoiceNo": "CN-2026.05.07-10.30.",
+      "voucherNo": 0,
+      "createdDate": 20260507,
+      "changedDate": 20260507
+    },
+    {
+      "incomingAccountingDocumentNo": 795,
+      "description": "DC Testing",
+      "documentDate": 20260507,
+      "dueDate": 20260606,
+      "supplierNo": 50074,
+      "supplierName": "DC Testing",
+      "incomingAccountingDocumentStatusFlags": ["SentToAccounting", "DuplicateDocument"],
+      "incomingAccountingDocumentType": 1,
+      "incomingAccountingDocumentOrigin": 1,
+      "invoiceNo": "INV-2026.05.07-10.30",
+      "voucherNo": 0,
+      "createdDate": 20260507,
+      "changedDate": 20260507
+    },
+    {
+      "incomingAccountingDocumentNo": 785,
+      "description": "Manchester Industries Ltd",
+      "documentDate": 20260507,
+      "dueDate": 20260606,
+      "supplierNo": 50081,
+      "supplierName": "Manchester Industries Ltd",
+      "incomingAccountingDocumentStatusFlags": ["SentToAccounting"],
+      "incomingAccountingDocumentType": 1,
+      "incomingAccountingDocumentOrigin": 1,
+      "invoiceNo": "INV-2026.05.07-10.30",
+      "voucherNo": 0,
+      "createdDate": 20260507,
+      "changedDate": 20260507
+    }
+  ],
+  "supplierBalances": [
+    { "supplierNo": 50000, "name": "Kontorpluss AS", "outstandingAmount": -708828.09, "numberOfOpenEntries": 49, "oldestDueDate": 20190621 },
+    { "supplierNo": 51016, "name": "Erling NXT Demo", "outstandingAmount": -455027, "numberOfOpenEntries": 9, "oldestDueDate": 20220506 },
+    { "supplierNo": 51004, "name": "DGKM", "outstandingAmount": -70328, "numberOfOpenEntries": 1, "oldestDueDate": 20190721 },
+    { "supplierNo": 50009, "name": "Resource", "outstandingAmount": -46287.14, "numberOfOpenEntries": 1, "oldestDueDate": 20190621 },
+    { "supplierNo": 50021, "name": "Gjermund AS", "outstandingAmount": -26593, "numberOfOpenEntries": 1, "oldestDueDate": 20240810 },
+    { "supplierNo": 60000, "name": "Handel og kontor", "outstandingAmount": -25472.5, "numberOfOpenEntries": 2, "oldestDueDate": 20190610 },
+    { "supplierNo": 50004, "name": "Nytt demofirma", "outstandingAmount": -16785, "numberOfOpenEntries": 2, "oldestDueDate": 20190628 },
+    { "supplierNo": 51012, "name": "Santech Micro Group Norway AS", "outstandingAmount": -15000, "numberOfOpenEntries": 1, "oldestDueDate": 20190625 },
+    { "supplierNo": 50102, "name": "Kreatel AS", "outstandingAmount": -14040, "numberOfOpenEntries": 13, "oldestDueDate": 20260614 },
+    { "supplierNo": 50008, "name": "Holger Hartmann AS", "outstandingAmount": -13000, "numberOfOpenEntries": 2, "oldestDueDate": 20190715 }
+  ],
+  "approvalTasks": [
+    {
+      "taskNo": 626,
+      "description": "Faktura 1001563 — Kontorpluss AS",
+      "status": "waiting",
+      "supplierNo": 50000,
+      "supplierName": "Kontorpluss AS",
+      "invoiceNo": "1001563",
+      "amount": 1475,
+      "dueDate": "2025-09-03",
+      "createdDate": "2025-08-20",
+      "flowName": "Tre-stegs godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "mads.johnsen@visma.com", "name": "Mads Ove Johnsen" }],
+          "status": "active"
+        },
+        {
+          "stepId": 2,
+          "stepType": "or",
+          "approvers": [{ "email": "frode.vestavik@visma.com", "name": "Frode Vestavik" }],
+          "status": "pending"
+        },
+        {
+          "stepId": 3,
+          "stepType": "and",
+          "approvers": [{ "email": "kenneth.flaglien@visma.com", "name": "Kenneth Flaglien" }],
+          "status": "pending"
+        }
+      ],
+      "currentStepId": 1,
+      "currentApprover": { "email": "mads.johnsen@visma.com", "name": "Mads Ove Johnsen" }
+    },
+    {
+      "taskNo": 625,
+      "description": "Faktura 16780 — Kreatel AS",
+      "status": "waiting",
+      "supplierNo": 50102,
+      "supplierName": "Kreatel AS",
+      "invoiceNo": "16780",
+      "amount": 3500,
+      "dueDate": "2026-06-14",
+      "createdDate": "2026-05-15",
+      "flowName": "Standard godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "frode.vestavik@visma.com", "name": "Frode Vestavik" }],
+          "status": "active"
+        }
+      ],
+      "currentStepId": 1,
+      "currentApprover": { "email": "frode.vestavik@visma.com", "name": "Frode Vestavik" }
+    },
+    {
+      "taskNo": 624,
+      "description": "Faktura FI-2026-0042 — Fjord Industries AS",
+      "status": "in-flow",
+      "supplierNo": 50064,
+      "supplierName": "Fjord Industries AS",
+      "invoiceNo": "FI-2026-0042",
+      "amount": 12750,
+      "dueDate": "2026-06-20",
+      "createdDate": "2026-05-12",
+      "flowName": "To-stegs godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "erling.hansen@visma.com", "name": "Erling Hansen" }],
+          "status": "approved",
+          "completedAt": "2026-05-28T09:14:00Z"
+        },
+        {
+          "stepId": 2,
+          "stepType": "and",
+          "approvers": [{ "email": "christina.berg@visma.com", "name": "Christina Berg" }],
+          "status": "active"
+        }
+      ],
+      "currentStepId": 2,
+      "currentApprover": { "email": "christina.berg@visma.com", "name": "Christina Berg" }
+    },
+    {
+      "taskNo": 622,
+      "description": "Faktura MI-2026-115 — Manchester Industries Ltd",
+      "status": "approved",
+      "supplierNo": 50081,
+      "supplierName": "Manchester Industries Ltd",
+      "invoiceNo": "MI-2026-115",
+      "amount": 8200,
+      "dueDate": "2026-06-06",
+      "createdDate": "2026-05-07",
+      "flowName": "To-stegs godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "erling.hansen@visma.com", "name": "Erling Hansen" }],
+          "status": "approved",
+          "completedAt": "2026-05-15T11:22:00Z"
+        },
+        {
+          "stepId": 2,
+          "stepType": "and",
+          "approvers": [{ "email": "mads.johnsen@visma.com", "name": "Mads Ove Johnsen" }],
+          "status": "approved",
+          "completedAt": "2026-05-18T14:05:00Z"
+        }
+      ],
+      "currentStepId": null,
+      "currentApprover": null
+    },
+    {
+      "taskNo": 616,
+      "description": "Faktura DC-0099 — DC Testing",
+      "status": "waiting",
+      "supplierNo": 50074,
+      "supplierName": "DC Testing",
+      "invoiceNo": "DC-0099",
+      "amount": 950,
+      "dueDate": "2026-06-01",
+      "createdDate": "2026-05-02",
+      "flowName": "Standard godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "frode.vestavik@visma.com", "name": "Frode Vestavik" }],
+          "status": "active"
+        }
+      ],
+      "currentStepId": 1,
+      "currentApprover": { "email": "frode.vestavik@visma.com", "name": "Frode Vestavik" }
+    },
+    {
+      "taskNo": 611,
+      "description": "Faktura 1001558 — Kontorpluss AS",
+      "status": "in-flow",
+      "supplierNo": 50000,
+      "supplierName": "Kontorpluss AS",
+      "invoiceNo": "1001558",
+      "amount": 24500,
+      "dueDate": "2025-08-15",
+      "createdDate": "2025-07-28",
+      "flowName": "Tre-stegs godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "frode.vestavik@visma.com", "name": "Frode Vestavik" }],
+          "status": "approved",
+          "completedAt": "2025-08-02T10:31:00Z"
+        },
+        {
+          "stepId": 2,
+          "stepType": "and",
+          "approvers": [{ "email": "mads.johnsen@visma.com", "name": "Mads Ove Johnsen" }],
+          "status": "active"
+        },
+        {
+          "stepId": 3,
+          "stepType": "and",
+          "approvers": [{ "email": "christina.berg@visma.com", "name": "Christina Berg" }],
+          "status": "pending"
+        }
+      ],
+      "currentStepId": 2,
+      "currentApprover": { "email": "mads.johnsen@visma.com", "name": "Mads Ove Johnsen" }
+    },
+    {
+      "taskNo": 605,
+      "description": "Faktura SM-2026-019 — Santech Micro Group Norway AS",
+      "status": "in-flow",
+      "supplierNo": 51012,
+      "supplierName": "Santech Micro Group Norway AS",
+      "invoiceNo": "SM-2026-019",
+      "amount": 87400,
+      "dueDate": "2026-06-25",
+      "createdDate": "2026-05-18",
+      "flowName": "Tre-stegs godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "erling.hansen@visma.com", "name": "Erling Hansen" }],
+          "status": "approved",
+          "completedAt": "2026-05-22T08:45:00Z"
+        },
+        {
+          "stepId": 2,
+          "stepType": "and",
+          "approvers": [{ "email": "christina.berg@visma.com", "name": "Christina Berg" }],
+          "status": "approved",
+          "completedAt": "2026-05-29T16:10:00Z"
+        },
+        {
+          "stepId": 3,
+          "stepType": "and",
+          "approvers": [{ "email": "kenneth.flaglien@visma.com", "name": "Kenneth Flaglien" }],
+          "status": "active"
+        }
+      ],
+      "currentStepId": 3,
+      "currentApprover": { "email": "kenneth.flaglien@visma.com", "name": "Kenneth Flaglien" }
+    },
+    {
+      "taskNo": 590,
+      "description": "Faktura GJ-2026-007 — Gjermund AS",
+      "status": "rejected",
+      "supplierNo": 50021,
+      "supplierName": "Gjermund AS",
+      "invoiceNo": "GJ-2026-007",
+      "amount": 45000,
+      "dueDate": "2026-05-20",
+      "createdDate": "2026-04-25",
+      "flowName": "To-stegs godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "erling.hansen@visma.com", "name": "Erling Hansen" }],
+          "status": "approved",
+          "completedAt": "2026-04-28T13:50:00Z"
+        },
+        {
+          "stepId": 2,
+          "stepType": "and",
+          "approvers": [{ "email": "kenneth.flaglien@visma.com", "name": "Kenneth Flaglien" }],
+          "status": "rejected",
+          "completedAt": "2026-05-02T09:20:00Z",
+          "comment": "Feil kontering, må korrigeres og sendes på nytt"
+        }
+      ],
+      "currentStepId": null,
+      "currentApprover": null
+    },
+    {
+      "taskNo": 585,
+      "description": "Faktura HH-2026-034 — Holger Hartmann AS",
+      "status": "waiting",
+      "supplierNo": 50008,
+      "supplierName": "Holger Hartmann AS",
+      "invoiceNo": "HH-2026-034",
+      "amount": 6800,
+      "dueDate": "2026-06-15",
+      "createdDate": "2026-05-10",
+      "flowName": "Standard godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "mads.johnsen@visma.com", "name": "Mads Ove Johnsen" }],
+          "status": "active"
+        }
+      ],
+      "currentStepId": 1,
+      "currentApprover": { "email": "mads.johnsen@visma.com", "name": "Mads Ove Johnsen" }
+    },
+    {
+      "taskNo": 583,
+      "description": "Faktura BNXT-TEST-44 — BNXT test company",
+      "status": "waiting",
+      "supplierNo": 50101,
+      "supplierName": "BNXT test company",
+      "invoiceNo": "BNXT-TEST-44",
+      "amount": 15200,
+      "dueDate": "2026-06-08",
+      "createdDate": "2026-05-05",
+      "flowName": "To-stegs godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "kenneth.flaglien@visma.com", "name": "Kenneth Flaglien" }],
+          "status": "active"
+        },
+        {
+          "stepId": 2,
+          "stepType": "or",
+          "approvers": [{ "email": "frode.vestavik@visma.com", "name": "Frode Vestavik" }],
+          "status": "pending"
+        }
+      ],
+      "currentStepId": 1,
+      "currentApprover": { "email": "kenneth.flaglien@visma.com", "name": "Kenneth Flaglien" }
+    },
+    {
+      "taskNo": 580,
+      "description": "Faktura ND-2026-012 — Nytt demofirma",
+      "status": "approved",
+      "supplierNo": 50004,
+      "supplierName": "Nytt demofirma",
+      "invoiceNo": "ND-2026-012",
+      "amount": 3200,
+      "dueDate": "2026-05-28",
+      "createdDate": "2026-04-30",
+      "flowName": "To-stegs godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "christina.berg@visma.com", "name": "Christina Berg" }],
+          "status": "approved",
+          "completedAt": "2026-05-05T10:00:00Z"
+        },
+        {
+          "stepId": 2,
+          "stepType": "and",
+          "approvers": [{ "email": "frode.vestavik@visma.com", "name": "Frode Vestavik" }],
+          "status": "approved",
+          "completedAt": "2026-05-08T15:30:00Z"
+        }
+      ],
+      "currentStepId": null,
+      "currentApprover": null
+    },
+    {
+      "taskNo": 565,
+      "description": "Faktura RES-2026-021 — Resource",
+      "status": "waiting",
+      "supplierNo": 50009,
+      "supplierName": "Resource",
+      "invoiceNo": "RES-2026-021",
+      "amount": 18750,
+      "dueDate": "2026-06-12",
+      "createdDate": "2026-05-08",
+      "flowName": "Standard godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "mads.johnsen@visma.com", "name": "Mads Ove Johnsen" }],
+          "status": "active"
+        }
+      ],
+      "currentStepId": 1,
+      "currentApprover": { "email": "mads.johnsen@visma.com", "name": "Mads Ove Johnsen" }
+    },
+    {
+      "taskNo": 562,
+      "description": "Faktura 1001547 — Kontorpluss AS",
+      "status": "error",
+      "supplierNo": 50000,
+      "supplierName": "Kontorpluss AS",
+      "invoiceNo": "1001547",
+      "amount": 2100,
+      "dueDate": "2025-07-20",
+      "createdDate": "2025-07-05",
+      "flowName": "Standard godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "frode.vestavik@visma.com", "name": "Frode Vestavik" }],
+          "status": "pending"
+        }
+      ],
+      "currentStepId": null,
+      "currentApprover": null
+    },
+    {
+      "taskNo": 561,
+      "description": "Faktura 16775 — Kreatel AS",
+      "status": "approved",
+      "supplierNo": 50102,
+      "supplierName": "Kreatel AS",
+      "invoiceNo": "16775",
+      "amount": 7600,
+      "dueDate": "2026-05-30",
+      "createdDate": "2026-04-28",
+      "flowName": "Standard godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "kenneth.flaglien@visma.com", "name": "Kenneth Flaglien" }],
+          "status": "approved",
+          "completedAt": "2026-05-01T11:45:00Z"
+        }
+      ],
+      "currentStepId": null,
+      "currentApprover": null
+    },
+    {
+      "taskNo": 560,
+      "description": "Faktura FI-2026-0038 — Fjord Industries AS",
+      "status": "waiting",
+      "supplierNo": 50064,
+      "supplierName": "Fjord Industries AS",
+      "invoiceNo": "FI-2026-0038",
+      "amount": 31200,
+      "dueDate": "2026-06-18",
+      "createdDate": "2026-05-01",
+      "flowName": "To-stegs godkjenning",
+      "steps": [
+        {
+          "stepId": 1,
+          "stepType": "and",
+          "approvers": [{ "email": "erling.hansen@visma.com", "name": "Erling Hansen" }],
+          "status": "active"
+        },
+        {
+          "stepId": 2,
+          "stepType": "and",
+          "approvers": [{ "email": "christina.berg@visma.com", "name": "Christina Berg" }],
+          "status": "pending"
+        }
+      ],
+      "currentStepId": 1,
+      "currentApprover": { "email": "erling.hansen@visma.com", "name": "Erling Hansen" }
+    }
+  ]
+}

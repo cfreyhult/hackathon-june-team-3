@@ -1,3 +1,9 @@
+export interface CompanyInfo {
+  companyNo: number
+  name: string
+  tenantId: number
+}
+
 export type ClosePhase = 'pre-close' | 'close-run' | 'variance-signoff'
 
 export type ItemStatus = 'complete' | 'open' | 'blocked' | 'overdue'
@@ -19,42 +25,53 @@ export interface CloseItem {
   status: ItemStatus
   isCriticalPath: boolean
   taskType: TaskType
-  /** Deep link URL to source module */
   sourceLink: string
-  /** Module the item belongs to */
   sourceModule: 'approval' | 'accounting' | 'project-financial-management'
-  /** Optional: linked approval task ID */
   approvalTaskId?: string
-  /** Business NXT incoming accounting document number */
   bnxtDocumentNo?: number
-  /** Human-readable status flags from Business NXT */
   bnxtStatusFlags?: string
-  /** Document origin (AutoInvoice, Scan, etc.) */
   bnxtOrigin?: string
 }
 
-export interface Approver {
-  id: string
-  name: string
+export interface ApprovalFlowApprover {
   email: string
-  department: string
-  /** Average approval time in hours (historical, last 6 periods) */
-  avgApprovalTimeHours: number
-  /** P90 approval time in hours */
-  p90ApprovalTimeHours: number
+  name: string
 }
 
+export type ApprovalStepStatus = 'pending' | 'active' | 'approved' | 'rejected'
+
+export interface ApprovalFlowStep {
+  stepId: number
+  stepType: 'and' | 'or'
+  approvers: ApprovalFlowApprover[]
+  status: ApprovalStepStatus
+  completedAt?: string
+  comment?: string
+}
+
+export type ApprovalTaskStatus =
+  | 'sent'
+  | 'waiting'
+  | 'approved'
+  | 'rejected'
+  | 'cancelled'
+  | 'error'
+  | 'in-flow'
+
 export interface ApprovalTask {
-  id: string
-  closeItemId: string
-  taskType: TaskType
-  title: string
-  approver: Approver
-  createdDate: string // ISO date
-  daysOutstanding: number
-  isOverdue: boolean
-  /** Close deadline for this task */
-  deadline: string // ISO date
+  taskNo: number
+  description: string
+  status: ApprovalTaskStatus
+  supplierNo: number
+  supplierName: string
+  invoiceNo: string
+  amount: number
+  dueDate: string
+  createdDate: string
+  flowName: string
+  steps: ApprovalFlowStep[]
+  currentStepId: number | null
+  currentApprover: ApprovalFlowApprover | null
 }
 
 export interface ReminderRecord {
@@ -64,31 +81,41 @@ export interface ReminderRecord {
   senderName: string
   recipientId: string
   recipientName: string
-  timestamp: string // ISO datetime
+  timestamp: string
   channel: 'email' | 'in-app' | 'both'
 }
 
-export interface TaskTypeStats {
-  taskType: TaskType
-  avgApprovalTimeHours: number
-  totalTasks: number
-  completedOnTime: number
+export interface ReadinessConfig {
+  criticalPathThreshold: number
+  nonCriticalThreshold: number
 }
 
-export interface ReadinessConfig {
-  /** Minimum % of critical-path tasks that must be complete */
-  criticalPathThreshold: number
-  /** Minimum % of non-critical tasks for full green */
-  nonCriticalThreshold: number
+export interface SupplierBalance {
+  supplierNo: number
+  name: string
+  outstandingAmount: number
+  numberOfOpenEntries: number
+  oldestDueDate: string
+  isOverdue: boolean
+}
+
+export interface OpenSupplierEntrySummary {
+  totalEntries: number
+  totalOutstanding: number
+  overdueEntries: number
+  overdueAmount: number
+  supplierCount: number
 }
 
 export interface CloseState {
   periodLabel: string
   companyName: string
-  closeDeadline: string // ISO date
+  closeDeadline: string
   items: CloseItem[]
   approvalTasks: ApprovalTask[]
   reminders: ReminderRecord[]
-  taskTypeStats: TaskTypeStats[]
   readinessConfig: ReadinessConfig
+  supplierBalances: SupplierBalance[]
+  openSupplierSummary: OpenSupplierEntrySummary
+  lastSyncedAt: string
 }
